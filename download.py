@@ -47,7 +47,6 @@ class Downloader:
         samples = []
         with open('BBCSoundEffects.csv', encoding='utf8') as f:
             reader = csv.DictReader(f)
-            count = 0
             for row in reader:
                 folder = self.sanitize_path(row['CDName'])
                 filename = self.sanitize_path(row['description']) + '.' + row['location']
@@ -55,7 +54,6 @@ class Downloader:
                 if not filepath.exists():
                     url = 'http://bbcsfx.acropolis.org.uk/assets/' + row['location']
                     samples.append((url, filepath))
-                count += 1
         return samples
 
     def sanitize_path(self, path):

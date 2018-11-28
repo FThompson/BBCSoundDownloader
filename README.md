@@ -8,4 +8,4 @@ This program requires [Python 3](https://www.python.org/downloads/). Download an
 
 By default, the program will download 10 samples at a time. This amount figures to be a safe value to avoid sending too many simultaneous requests to BBC's servers, but the value can be easily modified by changing the value of `THREAD_COUNT` in the code. When determining what to download, the program first checks what already exists in the `sounds/` directory to avoid redownloading samples (i.e. if any downloads fail or the program is stopped without downloading the entire library).
 
-I have only tested this program up to a few hundred downloads, so please report any unexpected bugs/problems by opening Issues.
+Tested on Windows 10, macOS High Sierra, and Ubuntu 18.04. Uses only Python's standard library—no additional packages need to be installed. I have only tested this program up to a few hundred downloads, so please report any unexpected bugs/problems by opening Issues.

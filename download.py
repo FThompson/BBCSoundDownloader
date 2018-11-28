@@ -7,6 +7,7 @@ from multiprocessing.pool import ThreadPool
 from pathlib import Path
 
 THREAD_COUNT = 10
+MAX_FILENAME_LENGTH = 143  # this is the max with ecryptfs, but most systems are 255 chars max
 
 
 class Downloader:
@@ -49,7 +50,9 @@ class Downloader:
             reader = csv.DictReader(f)
             for row in reader:
                 folder = self.sanitize_path(row['CDName'])
-                filename = self.sanitize_path(row['description']) + '.' + row['location']
+                suffix = '.' + row['location']
+                max_description_length = MAX_FILENAME_LENGTH - len(suffix)
+                filename = self.sanitize_path(row['description'])[:max_description_length] + suffix
                 filepath = Path('sounds') / folder / filename
                 if not filepath.exists():
                     url = 'http://bbcsfx.acropolis.org.uk/assets/' + row['location']

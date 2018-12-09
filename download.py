@@ -33,7 +33,7 @@ class Downloader:
         try:
             filepath.parent.mkdir(parents=True, exist_ok=True)
             temp_path, headers = urllib.request.urlretrieve(url)
-            Path(temp_path).rename(filepath)
+            Path(temp_path).replace(filepath)
             self.finished += 1
             print('(%d/%d) Finished %s' % (self.finished, self.total_count, str(filepath)))
             return True, None, None

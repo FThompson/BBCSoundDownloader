@@ -2,6 +2,7 @@ import csv
 import encodings.idna  # avoid encoding error in distributable
 import re
 import sys
+import shutil
 import urllib.request
 from multiprocessing.pool import ThreadPool
 from pathlib import Path

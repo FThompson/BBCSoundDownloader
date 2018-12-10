@@ -1,8 +1,9 @@
 import csv
 import encodings.idna  # avoid encoding error in distributable
+import os
 import re
-import sys
 import shutil
+import sys
 import urllib.request
 from multiprocessing.pool import ThreadPool
 from pathlib import Path
@@ -47,7 +48,8 @@ class Downloader:
 
     def get_samples(self):
         samples = []
-        with open('BBCSoundEffects.csv', encoding='utf8') as f:
+        csv_path = os.path.join(os.path.dirname(__file__), 'BBCSoundEffects.csv')
+        with open(csv_path, encoding='utf8') as f:
             reader = csv.DictReader(f)
             for row in reader:
                 folder = self.sanitize_path(row['CDName'])

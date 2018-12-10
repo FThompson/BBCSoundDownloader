@@ -2,6 +2,7 @@ import csv
 import encodings.idna  # avoid encoding error in distributable
 import re
 import sys
+import shutil
 import urllib.request
 from multiprocessing.pool import ThreadPool
 from pathlib import Path
@@ -33,7 +34,7 @@ class Downloader:
         try:
             filepath.parent.mkdir(parents=True, exist_ok=True)
             temp_path, headers = urllib.request.urlretrieve(url)
-            Path(temp_path).rename(filepath)
+            shutil.move(temp_path, filepath)
             self.finished += 1
             print('(%d/%d) Finished %s' % (self.finished, self.total_count, str(filepath)))
             return True, None, None

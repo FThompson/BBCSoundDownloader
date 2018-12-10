@@ -25,7 +25,7 @@ class Downloader:
         for success, filepath, e in results:
             if not success:
                 print('%s failed with exception: %s' % (filepath, e))
-        print(self.failed + ' failures reported.')
+        print('%d failures reported.' % self.failed)
 
     def download(self, sample):
         url, filepath = sample

@@ -1,6 +1,6 @@
 # BBC Sound Effects Downloader
 
-This program downloads all 16,000+ sounds from BBC's Sound Effects library, found at http://bbcsfx.acropolis.org.uk/. The samples downloaded by this program are BBC copyright and subject to the [RemArc License](https://github.com/bbcarchdev/Remarc/blob/master/doc/2016.09.27_RemArc_Content%20licence_Terms%20of%20Use_final.pdf). BBC also offers [licenses](https://blog.prosoundeffects.com/how-to-license-bbc-sound-effects-to-use-in-your-commercial-productions) for commerical usage of these samples.
+This program downloads all 16,000+ sounds from BBC's Sound Effects library, found at http://bbcsfx.acropolis.org.uk/. The samples downloaded by this program are BBC copyright and subject to the [RemArc License](https://github.com/bbcarchdev/Remarc/blob/master/doc/2016.09.27_RemArc_Content%20licence_Terms%20of%20Use_final.pdf). BBC also offers [licenses](https://blog.prosoundeffects.com/how-to-license-bbc-sound-effects-to-use-in-your-commercial-productions) for commercial usage of these samples.
 
 ## Usage
 

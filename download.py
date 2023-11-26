@@ -58,7 +58,7 @@ class Downloader:
                 filename = self.sanitize_path(row['description'])[:max_description_length] + suffix
                 filepath = Path('sounds') / folder / filename
                 if not filepath.exists():
-                    url = 'http://bbcsfx.acropolis.org.uk/assets/' + row['location']
+                    url = 'https://sound-effects-media.bbcrewind.co.uk/wav/' + row['location']
                     samples.append((url, filepath))
         return samples
 
